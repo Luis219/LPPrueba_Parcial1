@@ -1,10 +1,10 @@
 
+
 from markupsafe import escape
 
 from flask import Flask, render_template, request, flash, url_for
 
 app=Flask(__name__, template_folder='templates')
-
 
 #ruta de la pagina index
 @app.route('/')
@@ -12,6 +12,22 @@ app=Flask(__name__, template_folder='templates')
 #funcion que renderiza la pagina index.html
 def inicio():
     return render_template('index.html')
+
+#ruta de la pagina index
+@app.route('/usuario', methods=['POST'])
+
+#funcion que renderiza la pagina index.html
+def usuario():
+    correo=request.form.get('correo')
+    
+    correos=[]
+
+    correos.append(correo)
+ 
+
+    return render_template('index.html', correos=correos)
+
+
 
 #ruta de la pagina registro
 @app.route('/registro')
@@ -22,6 +38,7 @@ def registro():
 
 #ruta de la pagina registro
 @app.route('/enviar', methods=['POST'])
+
 
 #funcion que renderiza la pagina estadocliente.html
 def enviar():
