@@ -14,7 +14,7 @@ def inicio():
     return render_template('index.html')
 
 #ruta de la pagina registro
-@app.route('/registro', methods=['POST'])
+@app.route('/registro')
 
 #funcion que renderiza la pagina estadocliente.html
 def registro():
@@ -39,17 +39,19 @@ def enviar():
 
     return render_template('estadocliente.html', nombres=nombres, telefonos=telefonos, estados=estados)
 
+
+
 #ruta de la pagina index
-@app.route('/tienda', methods=['POST'])
+@app.route('/tienda')
 
 #funcion que renderiza la pagina tienda.html
-def registro():
+def tienda():
     return render_template('tienda.html')
 
 #ruta de la pagina index
 @app.route('/enviar_tienda', methods=['POST'])
 
-#funcion que renderiza la pagina tienda.html
+#funcion que guarda en lista las tiendas
 def enviarTienda():
     nombre=request.form.get('nombre')
     telefono=request.form.get('telefono')

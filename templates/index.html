@@ -14,9 +14,10 @@
     <center>
         <h1>Cliente: Inicio Sesión</h1>
     </center>
+    <center>
     <!--Formulario de inicio sesion -->
-    <form>
-        <div class="form-group row">
+    <form class="" >
+        <div class="form-group row text-success ">
           <label for="staticEmail" class="col-sm-2 col-form-label">Correo Electronico</label>
           <div class="col-sm-10">
             <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
@@ -36,7 +37,37 @@
       <form action="POST" action="{{url_for('registro')}}">
         <button type="submit" class="btn btn-primary">Registrarse</button>
       </form>
-      
+
+      <table class="table table-hover table-info ">
+        <thead>
+          <tr>
+          
+            <th scope="col">Correo</th>
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr>
+    
+            <!--Usuarios-->
+            <td>
+              <u> {% for correo in correos %}
+                <li>
+                  {{corre}}
+                </li>
+                {% endfor %}
+              </u>
+            </td>
+        
+           
+    
+    
+          </tr>
+    
+        </tbody>
+      </table>
+     
+    </center>
     
 </body>
 </html>

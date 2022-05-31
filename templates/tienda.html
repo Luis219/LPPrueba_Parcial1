@@ -10,19 +10,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 </head>
 <body>
+    <center>
+        <h1>Tienda</h1>
     <form>
         <!--Formulario de tienda-->
-        <form method="post" action="{{url_for()}}">
-            <div class="form-group">
+        <form method="post" action="{{url_for('tienda')}}" class="text-success">
+            <div class="form-group text-success">
               <label for="formGroupExampleInput">Nombre</label>
               <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre">
             </div>
-            <div class="form-group">
+            <div class="form-group text-success">
               <label for="formGroupExampleInput2">Telefono</label>
               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Telefono">
             </div>
           </form>
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-4 text-success">
             <label for="inputState">Estado</label>
             <select id="inputState" class="form-control">
               <option selected>Normal</option>
@@ -33,7 +35,8 @@
             <label for="formGroupExampleInput2">Gerente</label>
             <input type="text" class="form-control" id="formGroupExampleInput2" name="Gerente" placeholder="Gerente">
           </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Registrar</button>
       </form>
+    </center>
 </body>
 </html>
